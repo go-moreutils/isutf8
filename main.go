@@ -48,7 +48,7 @@ func main() {
 	for _, arg := range flag.Args() {
 		f, err := os.Open(arg)
 		if err != nil {
-			fmt.Fprintln(os.Stderr, "%s: %s: %s", os.Args[0], arg, err)
+			fmt.Fprintf(os.Stderr, "%s: %s: %s\n", os.Args[0], arg, err)
 			os.Exit(1)
 		}
 		check(arg, bufio.NewReader(f))
