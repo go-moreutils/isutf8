@@ -52,5 +52,6 @@ func main() {
 			os.Exit(1)
 		}
 		check(arg, bufio.NewReader(f))
+		f.Close()
 	}
 }
